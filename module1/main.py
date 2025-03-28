@@ -25,3 +25,13 @@ def compare_files(file1, file2, same_output="same.txt", diff_output="diff.txt"):
     print(f"Спільні рядки збережено в '{same_output}'")
     print(f"Відмінні рядки збережено в '{diff_output}'")
     print(f"Спільних рядків: {len(same_lines)}, Відмінних: {len(diff_lines)}")
+
+if __name__ == "__main__":
+    print("=== Порівняння двох .txt файлів ===")
+    file1 = input("Введіть назву першого файлу (наприклад, file1.txt): ").strip()
+    file2 = input("Введіть назву другого файлу (наприклад, file2.txt): ").strip()
+
+    if not file1 or not file2:
+        print("Ви не ввели імена обох файлів. Завершення програми.")
+    else:
+        compare_files(file1, file2)
